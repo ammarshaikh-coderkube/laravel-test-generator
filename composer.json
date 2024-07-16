@@ -1,0 +1,26 @@
+{
+    "name" : "MrShk7/laravel-test-generator",
+    "description": "Laravel package for generating unit test automatically",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ammar Shaikh",
+            "email": "ammar.7.shaikh@gmail.com"
+        }
+    ],
+    "require": {
+        "fakerphp/faker": "^1.23"
+    },
+    "autoload": {
+        "psr-4": {
+            "MrShk7\\LaravelTestGenerator\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MrShk7\\LaravelTestGenerator\\TestGeneratorServiceProvider"
+            ]
+        }
+    }
+}
