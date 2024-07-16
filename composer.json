@@ -22,5 +22,7 @@
                 "MrShk7\\LaravelTestGenerator\\TestGeneratorServiceProvider"
             ]
         }
-    }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
 }
