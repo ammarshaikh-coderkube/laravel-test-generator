@@ -135,7 +135,7 @@ class Generator
     {
         $uri = $route->uri();
 
-        if (!starts_with($uri, '/')) {
+        if (!str_starts_with($uri, '/')) {
             $uri = '/' . $uri;
         }
 
@@ -153,15 +153,17 @@ class Generator
         if (!is_string($action)) return false;
         
         $parsedAction = Str::parseCallback($action);
-        
-        $reflector = (new ReflectionMethod($parsedAction[0], $parsedAction[1]));
-        $parameters = $reflector->getParameters();
-        
-        foreach ($parameters as $parameter) {
-            $class = optional($parameter->getType())->getName();
+        if(method_exists($parsedAction[0], $parsedAction[1])){
+            $reflector = (new ReflectionMethod($parsedAction[0], $parsedAction[1]));
+            $parameters = $reflector->getParameters();
             
-            if (is_subclass_of($class, FormRequest::class)) {
-                return (new $class)->rules();
+            foreach ($parameters as $parameter) {
+                $class = optional($parameter->getType())->getName();
+                
+                if (is_subclass_of($class, FormRequest::class)) {
+                    dd((new $class)->rules());
+                    return (new $class)->rules();
+                }
             }
         }
     }
