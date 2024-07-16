@@ -1,5 +1,5 @@
 {
-    "name" : "MrShk7/laravel-test-generator",
+    "name" : "mrshk/laravel-test-generator",
     "description": "Laravel package for generating unit test automatically",
     "license": "MIT",
     "authors": [
