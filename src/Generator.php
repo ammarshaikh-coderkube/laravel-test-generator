@@ -6,7 +6,7 @@ use ReflectionMethod;
 use Illuminate\Routing\Route;
 use Illuminate\Support\Str;
 use Illuminate\Foundation\Http\FormRequest;
-use Vigneshc91\LaravelTestGenerator\TestCaseGenerator;
+use MrShk7\LaravelTestGenerator\TestCaseGenerator;
 
 class Generator
 {
