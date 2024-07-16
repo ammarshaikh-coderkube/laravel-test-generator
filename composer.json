@@ -2,6 +2,7 @@
     "name" : "mrshk/laravel-test-generator",
     "description": "Laravel package for generating unit test automatically",
     "license": "MIT",
+    "version": "1.0.0",
     "authors": [
         {
             "name": "Ammar Shaikh",
